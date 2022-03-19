@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(19, 17, 41);
+    color: rgb(148, 155, 162);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-style: normal;
+    font-weight: normal;
+    min-height: 100%;
+    float: left;
+    position: relative;
+    width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
+}
