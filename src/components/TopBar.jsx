@@ -1,13 +1,12 @@
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React from "react";
 
-export default function TopBar() {
+function TopBar() {
   return (
     <div className="page-topbar">
-      <div className="logo-area">
-      </div>
+      <div className="logo-area"></div>
       <div className="quick-area">
         <div className="pull-left">
           <ul className="info-menu left-links list-inline list-unstyled">
@@ -22,14 +21,16 @@ export default function TopBar() {
                 <span className="badge badge-accent">7</span>
               </a>
               <ul className="dropdown-menu messages animated fadeIn">
-
                 <li className="list ps-container">
-
                   <ul className="dropdown-menu-list list-unstyled ps-scrollbar">
                     <li className="unread status-available">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-1.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-1.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -37,16 +38,18 @@ export default function TopBar() {
                             <span className="time small">- 15 mins ago</span>
                             <span className="profile-status available pull-right"></span>
                           </span>
-                          <span className="desc small">
-                            check your slack.
-                          </span>
+                          <span className="desc small">check your slack.</span>
                         </div>
                       </a>
                     </li>
                     <li className=" status-away">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-2.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-2.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -63,7 +66,11 @@ export default function TopBar() {
                     <li className=" status-busy">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-3.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-3.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -80,7 +87,11 @@ export default function TopBar() {
                     <li className=" status-offline">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-4.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-4.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -97,7 +108,11 @@ export default function TopBar() {
                     <li className=" status-offline">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-1.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-1.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -114,7 +129,11 @@ export default function TopBar() {
                     <li className=" status-available">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-1.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-1.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -131,7 +150,11 @@ export default function TopBar() {
                     <li className=" status-busy">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-2.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-2.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -148,7 +171,11 @@ export default function TopBar() {
                     <li className=" status-away">
                       <a href="javascript:;">
                         <div className="user-img">
-                          <img src="/data/profile/avatar-3.png" alt="user-image" className="img-circle img-inline" />
+                          <img
+                            src="/data/profile/avatar-3.png"
+                            alt="user-image"
+                            className="img-circle img-inline"
+                          />
                         </div>
                         <div>
                           <span className="name">
@@ -162,17 +189,25 @@ export default function TopBar() {
                         </div>
                       </a>
                     </li>
-
                   </ul>
 
-                  <div className="ps-scrollbar-x-rail"
-                    style={{ left: '0px', bottom: '3px' }}>
-                    <div className="ps-scrollbar-x" style={{ left: '0px', width: '0px' }}>
-                    </div>
+                  <div
+                    className="ps-scrollbar-x-rail"
+                    style={{ left: "0px", bottom: "3px" }}
+                  >
+                    <div
+                      className="ps-scrollbar-x"
+                      style={{ left: "0px", width: "0px" }}
+                    ></div>
                   </div>
-                  <div className="ps - scrollbar - y - rail" style={{ top: '0px', right: '3px' }}>
-                    <div className="ps-scrollbar-y" style={{ top: '0px', height: '0px' }}>
-                    </div>
+                  <div
+                    className="ps - scrollbar - y - rail"
+                    style={{ top: "0px", right: "3px" }}
+                  >
+                    <div
+                      className="ps-scrollbar-y"
+                      style={{ top: "0px", height: "0px" }}
+                    ></div>
                   </div>
                 </li>
 
@@ -182,7 +217,6 @@ export default function TopBar() {
                   </a>
                 </li>
               </ul>
-
             </li>
             <li className="notify-toggle-wrapper showopacity">
               <a href="#" data-toggle="dropdown" className="toggle">
@@ -193,11 +227,12 @@ export default function TopBar() {
                 <li className="total">
                   <span className="small">
                     You have <strong>3</strong> new notifications.
-                    <a href="javascript:;" className="pull-right">Mark all as Read</a>
+                    <a href="javascript:;" className="pull-right">
+                      Mark all as Read
+                    </a>
                   </span>
                 </li>
                 <li className="list ps-container">
-
                   <ul className="dropdown-menu-list list-unstyled ps-scrollbar">
                     <li className="unread available">
                       <a href="javascript:;">
@@ -252,17 +287,25 @@ export default function TopBar() {
                         </div>
                       </a>
                     </li>
-
                   </ul>
 
-                  <div className="ps-scrollbar-x-rail"
-                    style={{ left: '0px', bottom: '3px' }}>
-                    <div className="ps-scrollbar-x" style={{ left: '0px', width: '0px' }}>
-                    </div>
+                  <div
+                    className="ps-scrollbar-x-rail"
+                    style={{ left: "0px", bottom: "3px" }}
+                  >
+                    <div
+                      className="ps-scrollbar-x"
+                      style={{ left: "0px", width: "0px" }}
+                    ></div>
                   </div>
-                  <div className="ps - scrollbar - y - rail" style={{ top: '0px', right: '3px' }}>
-                    <div className="ps-scrollbar-y" style={{ top: '0px', height: '0px' }}>
-                    </div>
+                  <div
+                    className="ps - scrollbar - y - rail"
+                    style={{ top: "0px", right: "3px" }}
+                  >
+                    <div
+                      className="ps-scrollbar-y"
+                      style={{ top: "0px", height: "0px" }}
+                    ></div>
                   </div>
                 </li>
 
@@ -279,7 +322,11 @@ export default function TopBar() {
                   <span className="input-group-addon">
                     <i className="fa fa-search" aria-hidden="true"></i>
                   </span>
-                  <input type="text" className="form-control animated fadeIn" placeholder="Search &amp; Enter" />
+                  <input
+                    type="text"
+                    className="form-control animated fadeIn"
+                    placeholder="Search &amp; Enter"
+                  />
                 </div>
                 <input type="submit" value="" />
               </form>
@@ -290,8 +337,15 @@ export default function TopBar() {
           <ul className="info-menu right-links list-inline list-unstyled">
             <li className="profile showopacity">
               <a href="#" data-toggle="dropdown" className="toggle">
-                <img src="/data/profile/profile.jpg" alt="user-image" className="img-circle img-inline" />
-                <span>Smith Wright <i className="fa fa-angle-down" aria-hidden="true"></i></span>
+                <img
+                  src="/data/profile/profile.jpg"
+                  alt="user-image"
+                  className="img-circle img-inline"
+                />
+                <span>
+                  Smith Wright{" "}
+                  <i className="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
               </a>
               <ul className="dropdown-menu profile animated fadeIn">
                 <li>
@@ -325,7 +379,9 @@ export default function TopBar() {
             </li>
           </ul>
         </div>
-      </div >
-
-    </div >)
+      </div>
+    </div>
+  );
 }
+
+export default TopBar;
