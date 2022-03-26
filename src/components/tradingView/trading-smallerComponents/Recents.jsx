@@ -1,6 +1,45 @@
+import { isTSMethodSignature } from "@babel/types";
 import React from "react";
 
 const Recents = () => {
+  const recentTrades = [
+    {
+      id: 1,
+      dealNumber: "Deal number 126515",
+      tradeTime: "17.24AM",
+      status: "complete",
+      tradeAmount: "0.00113BTC",
+    },
+    {
+      id: 2,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+      tradeAmount: "3.90244 LTC",
+    },
+    {
+      id: 3,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+      tradeAmount: "3.90244 LTC",
+    },
+    {
+      id: 4,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+      tradeAmount: "3.90244 LTC",
+    },
+    {
+      id: 5,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+      tradeAmount: "3.90244 LTC",
+    },
+  ];
+
   return (
     <div className="col-lg-7">
       <section
@@ -41,174 +80,25 @@ const Recents = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o complete"></i> Deal
-                        number 126515
-                      </th>
-                      <td>17.24AM</td>
-                      <td>
-                        <span className="status-complete">complete</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal"></i>
-                        0.00113 BTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o pending"></i> Deal
-                        number 123675
-                      </th>
-                      <td>18.14AM</td>
-                      <td>
-                        <span className="status-pending">pending</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal f-s-10"></i>
-                        3.90244 LTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o pending"></i> Deal
-                        number 126515
-                      </th>
-                      <td>20.25AM</td>
-                      <td>
-                        <span className="status-pending">pending</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-minus cancelled normal f-s-10"></i>
-                        0.00121 LTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o cancelled"></i>
-                        Deal number 159034
-                      </th>
-                      <td>21.24AM</td>
-                      <td>
-                        <span className="status-cancelled">cancelled</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal f-s-10"></i>
-                        0.01231 BTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o complete"></i> Deal
-                        number 136563
-                      </th>
-                      <td>21.50AM</td>
-                      <td>
-                        <span className="status-complete">complete</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-minus cancelled normal f-s-10"></i>
-                        0.6673 DASH
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o complete"></i> Deal
-                        number 177384
-                      </th>
-                      <td>21.59PM</td>
-                      <td>
-                        <span className="status-complete">complete</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-minus cancelled normal f-s-10"></i>
-                        0.97231 BTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o cancelled"></i>
-                        Deal number 173434
-                      </th>
-                      <td>22.11PM</td>
-                      <td>
-                        <span className="status-cancelled">cancelled</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal f-s-10"></i>
-                        9.2323 LTC
-                      </td>
-                    </tr>
-                    {/* <!-- Repeat --> */}
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o pending"></i> Deal
-                        number 1788348
-                      </th>
-                      <td>22.34PM</td>
-                      <td>
-                        <span className="status-pending">pending</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-minus cancelled normal f-s-10"></i>
-                        1.3433 DASH
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o complete"></i> Deal
-                        number 189915
-                      </th>
-                      <td>22.54PM</td>
-                      <td>
-                        <span className="status-complete">complete</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal"></i>12.343 LTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o complete"></i> Deal
-                        number 179993
-                      </th>
-                      <td>23.05PM</td>
-                      <td>
-                        <span className="status-complete">complete</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal f-s-10"></i>
-                        0.23234 LTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o cancelled"></i>
-                        Deal number 184563
-                      </th>
-                      <td>23.15PM</td>
-                      <td>
-                        <span className="status-cancelled">cancelled</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-minus cancelled normal f-s-10"></i>
-                        1.4231 BTC
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>
-                        <i className="fa fa-dot-circle-o pending"></i> Deal
-                        number 186564
-                      </th>
-                      <td>23.50PM</td>
-                      <td>
-                        <span className="status-pending">pending</span>
-                      </td>
-                      <td>
-                        <i className="fa fa-plus complete normal f-s-10"></i>
-                        2.3430 DASH
-                      </td>
-                    </tr>
+                    {recentTrades.map((recentTrade) => (
+                      <tr key={recentTrade.id}>
+                        <th>
+                          <i className="fa fa-dot-circle-o complete"></i>{" "}
+                          {recentTrade.dealNumber}
+                        </th>
+                        <td>{recentTrade.tradeTime} </td>
+                        <td>
+                          <span className="status-complete">
+                            {" "}
+                            {recentTrade.status}{" "}
+                          </span>
+                        </td>
+                        <td>
+                          <i className="fa fa-plus complete normal"></i>
+                          {recentTrade.tradeAmount}
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>

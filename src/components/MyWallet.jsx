@@ -1,6 +1,75 @@
 import React from "react";
 
 const MyWallet = () => {
+  const coins = [
+    {
+      id: 1,
+      walletHeader: `Bitcoin wallet`,
+      walletName: "Bitcoin",
+      walletAddress: "OxsD12F32xvW3deG5..",
+      usdEquivalent: "12,734 USD",
+      sellingAmount: "54,634",
+      buyingAmount: "534,263",
+      coinBalance: "1.5238237 BTC",
+      balanceUsd: "15,238,237 USD",
+    },
+    {
+      id: 2,
+      walletHeader: `Litecoin wallet`,
+      walletName: "Litecoin",
+      walletAddress: "OxsD12F32xvW3deG5..",
+      usdEquivalent: "734 USD",
+      sellingAmount: "54,634",
+      buyingAmount: "534,263",
+      coinBalance: "1.5238237 BTC",
+      balanceUsd: "15,238,237 USD",
+    },
+    {
+      id: 3,
+      walletHeader: `Ripple wallet`,
+      walletName: "Ripple",
+      walletAddress: "OxsD12F32xvW3deG5..",
+      usdEquivalent: "34 USD",
+      sellingAmount: "54,634",
+      buyingAmount: "534,263",
+      coinBalance: "1.5238237 BTC",
+      balanceUsd: "15,238,237 USD",
+    },
+    {
+      id: 4,
+      walletHeader: `Dashcoin wallet`,
+      walletName: "Dashcoin",
+      walletAddress: "OxsD12F32xvW3deG5..",
+      usdEquivalent: "12,734 USD",
+      sellingAmount: "54,634",
+      buyingAmount: "534,263",
+      coinBalance: "1.5238237 BTC",
+      balanceUsd: "15,238,237 USD",
+    },
+    {
+      id: 5,
+      walletHeader: `Dogecoin wallet`,
+      walletName: "Dogecoin",
+      walletAddress: "OxsD12F32xvW3deG5..",
+      usdEquivalent: "12,734 USD",
+      sellingAmount: "54,634",
+      buyingAmount: "534,263",
+      coinBalance: "1.5238237 BTC",
+      balanceUsd: "15,238,237 USD",
+    },
+    {
+      id: 6,
+      walletHeader: `Ethereum wallet`,
+      walletName: "Ethereum",
+      walletAddress: "OxsD12F32xvW3deG5..",
+      usdEquivalent: "12,734 USD",
+      sellingAmount: "54,634",
+      buyingAmount: "534,263",
+      coinBalance: "1.5238237 BTC",
+      balanceUsd: "15,238,237 USD",
+    },
+  ];
+
   return (
     <div className="wrapper main-wrapper row">
       <div className="col-xs-12">
@@ -52,113 +121,126 @@ const MyWallet = () => {
         </section>
       </div>
 
-      <div className="col-lg-4">
-        <section className="box has-border-left-3">
-          <header className="panel_header">
-            <h2 className="title pull-left">Bitcoin wallet</h2>
-            <div className="actions panel_actions pull-right">
-              <a
-                className="box_toggle fa fa-chevron-down"
-                aria-hidden="true"
-              ></a>
-              <a
-                className="box_setting fa fa-cog"
-                data-toggle="modal"
-                href="#section-settings"
-                aria-hidden="true"
-              ></a>
-              <a className="box_close fa fa-times" aria-hidden="true"></a>
-            </div>
-          </header>
-          <div className="content-body">
-            <div className="row">
-              <div className="col-xs-12">
-                <div className="text-center no-mt no-mb">
-                  <div className="transfer-wraper">
-                    <div className="crypto-icon">
-                      <i className="cc BTC color-primary"></i>
-                    </div>
-                    <strong className="mb-20">Bitcoin</strong>
-                    <div className="form-group Ceramax no-mb">
-                      <label className="form-label mt-10">wallet address</label>
-                      <span className="desc"></span>
-
-                      <div className="input-group mb-10">
-                        <span className="input-group-addon has-gradient-to-right-bottom">
-                          <i className="cc BTC-alt icon-white"></i>
-                        </span>
-                        <p className="form-control-static with-border">
-                          OxsD12F32xvW3deG5...
-                        </p>
-                        <a
-                          href="#"
-                          className="input-group-addon"
-                          data-color-className="primary"
-                          data-animate=" animated fadeIn"
-                          data-toggle="tooltip"
-                          data-original-title="copy"
-                          data-placement="top"
-                        >
-                          <i
-                            className="fa fa-copy text-dark"
-                            aria-hidden="true"
-                          ></i>
-                        </a>
+      {coins.map((coin) => (
+        <div className="col-lg-4">
+          <section className="box has-border-left-3">
+            <header className="panel_header">
+              <h2 className="title pull-left"> {coin.walletHeader} </h2>
+              <div className="actions panel_actions pull-right">
+                <a
+                  className="box_toggle fa fa-chevron-down"
+                  aria-hidden="true"
+                ></a>
+                <a
+                  className="box_setting fa fa-cog"
+                  data-toggle="modal"
+                  href="#section-settings"
+                  aria-hidden="true"
+                ></a>
+                <a className="box_close fa fa-times" aria-hidden="true"></a>
+              </div>
+            </header>
+            <div className="content-body">
+              <div className="row">
+                <div className="col-xs-12">
+                  <div className="text-center no-mt no-mb">
+                    <div className="transfer-wraper">
+                      <div className="crypto-icon">
+                        <i className="cc BTC color-primary"></i>
                       </div>
+                      <strong className="mb-20">{coin.walletName}</strong>
+                      <div className="form-group Ceramax no-mb">
+                        <label className="form-label mt-10">
+                          wallet address
+                        </label>
+                        <span className="desc"></span>
 
-                      <span className="desc">1 BTC</span>
-                      <label className="form-label"> = 12.734 USD</label>
-                      <br />
+                        <div className="input-group mb-10">
+                          <span className="input-group-addon has-gradient-to-right-bottom">
+                            <i className="cc BTC-alt icon-white"></i>
+                          </span>
+                          <p className="form-control-static with-border">
+                            {coin.walletAddress}
+                          </p>
+                          <a
+                            href="#"
+                            className="input-group-addon"
+                            data-color-className="primary"
+                            data-animate=" animated fadeIn"
+                            data-toggle="tooltip"
+                            data-original-title="copy"
+                            data-placement="top"
+                          >
+                            <i
+                              className="fa fa-copy text-dark"
+                              aria-hidden="true"
+                            ></i>
+                          </a>
+                        </div>
 
-                      <span className="desc">Total selling amount</span>
-                      <label className="form-label">54,634 $</label>
-                      <br />
+                        <span className="desc">1 BTC</span>
+                        <label className="form-label">
+                          {" "}
+                          = {coin.usdEquivalent} USD
+                        </label>
+                        <br />
 
-                      <span className="desc">Total buying buy</span>
-                      <label className="form-label">534,263 $</label>
-                      <br />
+                        <span className="desc">Total selling amount</span>
+                        <label className="form-label">
+                          {coin.sellingAmount} $
+                        </label>
+                        <br />
 
-                      <div className="mt-10 balance">
-                        <strong className="form-label bold">Balance : </strong>
-                        <span className="desc color-primary f-s-14">
-                          1.5238237 BTC
-                        </span>
-                      </div>
-                      <div className="balance bg-white">
-                        <strong className="form-label bold">
-                          Balance in USD:{" "}
-                        </strong>
-                        <span className="desc color-primary f-s-14">
-                          15,238,237 USD
-                        </span>
-                      </div>
+                        <span className="desc">Total buying buy</span>
+                        <label className="form-label">
+                          {coin.buyingAmount} $
+                        </label>
+                        <br />
 
-                      <div className="col-sm-6 no-pl">
-                        <a
-                          href="buy-and-sell.html"
-                          className="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom"
-                          style={{ width: "100%" }}
-                        >
-                          Withdraw
-                        </a>
-                      </div>
-                      <div className="col-sm-6 no-pr">
-                        <a
-                          href="buy-and-sell.html"
-                          className="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom"
-                          style={{ width: "100%" }}
-                        >
-                          Deposit
-                        </a>
+                        <div className="mt-10 balance">
+                          <strong className="form-label bold">
+                            Balance :{" "}
+                          </strong>
+                          <span className="desc color-primary f-s-14">
+                            {coin.coinBalance}
+                          </span>
+                        </div>
+                        <div className="balance bg-white">
+                          <strong className="form-label bold">
+                            Balance in USD:{" "}
+                          </strong>
+                          <span className="desc color-primary f-s-14">
+                            {coin.balanceUsd}
+                          </span>
+                        </div>
+
+                        <div className="col-sm-6 no-pl">
+                          <a
+                            href="buy-and-sell.html"
+                            className="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom"
+                            style={{ width: "100%" }}
+                          >
+                            Withdraw
+                          </a>
+                        </div>
+                        <div className="col-sm-6 no-pr">
+                          <a
+                            href="buy-and-sell.html"
+                            className="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom"
+                            style={{ width: "100%" }}
+                          >
+                            Deposit
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      ))}
 
       <div className="clearfix"></div>
 

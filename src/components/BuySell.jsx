@@ -2,6 +2,40 @@ import React from "react";
 import Recents from "./tradingView/trading-smallerComponents/Recents";
 
 const BuySell = () => {
+  const recentOrders = [
+    {
+      id: 1,
+      dealNumber: "Deal number 126515",
+      tradeTime: "17.24AM",
+      status: "complete",
+    },
+    {
+      id: 2,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+    },
+    {
+      id: 3,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+      tradeAmount: "3.90244 LTC",
+    },
+    {
+      id: 4,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+    },
+    {
+      id: 5,
+      dealNumber: "Deal number 123675",
+      tradeTime: "18.14AM",
+      status: "pending",
+    },
+  ];
+
   return (
     <div className="wrapper main-wrapper row">
       <div className="col-xs-12">
@@ -606,97 +640,24 @@ const BuySell = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o complete"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 126515
-                        </th>
-                        <td>17.24AM</td>
-                        <td>
-                          <span className="status-complete">complete</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o pending"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 123675
-                        </th>
-                        <td>18.14AM</td>
-                        <td>
-                          <span className="status-pending">pending</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o pending"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 126515
-                        </th>
-                        <td>20.25AM</td>
-                        <td>
-                          <span className="status-pending">pending</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o cancelled"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 159034
-                        </th>
-                        <td>21.24AM</td>
-                        <td>
-                          <span className="status-cancelled">cancelled</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o complete"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 136563
-                        </th>
-                        <td>21.50AM</td>
-                        <td>
-                          <span className="status-complete">complete</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o complete"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 177384
-                        </th>
-                        <td>21.59PM</td>
-                        <td>
-                          <span className="status-complete">complete</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <i
-                            className="fa fa-dot-circle-o cancelled"
-                            aria-hidden="true"
-                          ></i>{" "}
-                          Deal number 173434
-                        </th>
-                        <td>22.11PM</td>
-                        <td>
-                          <span className="status-cancelled">cancelled</span>
-                        </td>
-                      </tr>
+                      {recentOrders.map((recentOrder) => (
+                        <tr>
+                          <th>
+                            <i
+                              className="fa fa-dot-circle-o complete"
+                              aria-hidden="true"
+                            ></i>
+                            {recentOrder.dealNumber}
+                          </th>
+                          <td> {recentOrder.tradeTime} </td>
+                          <td>
+                            <span className="status-complete">
+                              {" "}
+                              {recentOrder.status}{" "}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>

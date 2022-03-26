@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AccessPages from "../AccessPages";
+import Chat from "./Chat";
 import Settings from "./Settings";
 import Support from "./Support";
 import Graphs from "./tradingView/Graphs";
@@ -45,10 +46,10 @@ const SideBar = (open) => {
               </Link>
             </li>
             <li className="">
-              <a href=".payment-gateways.html">
+              <Link to="/payment-gateway">
                 <i className="fa fa-credit-card" aria-hidden="true"></i>
                 <span className="title">Payment Gateways</span>
-              </a>
+              </Link>
             </li>
 
             <li className="">
@@ -81,50 +82,7 @@ const SideBar = (open) => {
 
             <li className="menusection">Applications</li>
 
-            <li className="">
-              {/* <a href="javascript:;"> DropDown */}
-              <i className="fa fa-envelope" aria-hidden="true"></i>
-              <span className="title">Mailbox</span>
-              <span className="arrow "></span>
-              <span className="label label-accent">4</span>
-              {/* </a> */}
-              <ul className="sub-menu">
-                <li>
-                  <a className="" href="./dashboard/mail-inbox.html">
-                    Inbox
-                  </a>
-                </li>
-                <li>
-                  <a className="" href="./dashboard/mail-compose.html">
-                    Compose
-                  </a>
-                </li>
-                <li>
-                  <a className="" href="mail-view.html">
-                    View
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="">
-              {/* <Link to='/'> DropDpow */}
-              <i className="fa fa-comments" aria-hidden="true"></i>
-              <span className="title">Chat API</span>
-              <span className="arrow "></span>
-              {/* </Link> */}
-              <ul className="sub-menu">
-                <li>
-                  <a className="" href="chat-api.html">
-                    Chat API
-                  </a>
-                </li>
-                <li>
-                  <a className="" href="chat-windows.html">
-                    Chat Windows
-                  </a>
-                </li>
-              </ul>
-            </li>
+            <Chat />
           </ul>
           <div
             className="ps-scrollbar-x-rail"

@@ -1,14 +1,13 @@
 import React from "react";
 
 const PaymentGateways = () => {
-  // let PaymentGates = [
-
-  //     {
-  //         name: 'paypal',
-  //         image: '/data/payment-gateways/paypal.png'
-  //     }
-
-  // ]
+  const paymentGates = [
+    {
+      name: "paypal",
+      src: "/public/data/payment-gateways/paypal.png",
+      check: true,
+    },
+  ];
 
   return (
     <div className="wrapper main-wrapper row">
@@ -48,10 +47,7 @@ const PaymentGateways = () => {
                     style={{ padding: "20px" }}
                   >
                     <div className="">
-                      <img
-                        src="../data/payment-gateways/paypal.png"
-                        alt="payment-gateway"
-                      />
+                      <img src={paymentGates.src} alt="payment-gateway" />
                     </div>
                   </div>
                   <div className="col-xs-12 no-pl no-pr">
@@ -113,10 +109,7 @@ const PaymentGateways = () => {
                         <div className="modal-body text-left">
                           <form>
                             <div className="col-sm-4 mb-20 no-pl">
-                              <img
-                                src="../data/payment-gateways/paypal.png"
-                                alt="logo"
-                              />
+                              {/* <img src={url} alt="logo" /> */}
                             </div>
                             <div className="clearfix"></div>
                             <div className="form-group">
